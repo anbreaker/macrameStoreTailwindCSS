@@ -11,6 +11,10 @@
 <!-- Genera archivo configuracion completo -->
 - `npx tailwindcss init tailwind.config.full.js --full`
 
+<!-- Para extender los css -->
+
+- `npx tailwindcss build css/tailwind.css -o public/css/styles.css`
+
 <!-- Plugin recomendado para VSCode: Tailwind CSS IntelliSense -->
 
 ### Creamos archivo de configuracion postcss.config.js
@@ -31,7 +35,7 @@
 
 ### Completamos script en package.json
 
-- `"scripts": { "build": "postcss css/tailwind.css -o public/css/styles.css",`
+- `"scripts": { "build": "postcss css/tailwind.css -o public/css/styles.css -w",`
 <!-- Para autoregenerar el tailwind.css cuando creamos paquetes -->
 - `"dev": "postcss css/tailwind.css -o public/css/styles.css --watch"}`
 <!-- Ejecutar para compilar -->
