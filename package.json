@@ -1,0 +1,19 @@
+{
+  "name": "macrameStore",
+  "version": "1.0.0",
+  "description": "macrame Store",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/css/styles.css",
+    "dev": "postcss css/tailwind.css -o public/css/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "anbreaker",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.4"
+  }
+}
