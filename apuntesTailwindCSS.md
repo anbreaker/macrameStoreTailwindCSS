@@ -46,3 +46,33 @@
 <!-- genera una directorio css con su styels.css en la carpeta public -->
 
 - `npm run build`
+
+### Instalacion PurgeCss
+
+- `npm i -D @fullhuman/postcss-purgecss`
+- En el archivo postcss.config.css pegar: `const purgecss = require('@fullhuman/postcss-purgecss')`
+- `const purgecss = require('@fullhuman/postcss-purgecss');
+<!-- En el mismo archivo, pegar en la seccion de plugins -->
+- `purgecss({content: ['./**/*.html']},`
+
+### Comando para instalar nanoCss
+
+- `$ npm i cssnano --save-dev`
+
+<!-- El archivo postcss.config.js queda asi; -->
+<!--
+const purgecss = require('@fullhuman/postcss-purgecss');
+
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+    purgecss({
+      content: ['./**/*.html'],
+      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+    }),
+    require("cssnano")({
+      preset: "default",
+    }),
+  ],
+}; -->
